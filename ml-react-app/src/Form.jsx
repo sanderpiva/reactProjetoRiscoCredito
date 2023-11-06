@@ -68,6 +68,7 @@ function Form() {
                         id="person_age"
                         name="person_age"
                         value={person_age}
+                        required
                         onChange={handleChange}
                     />
                 </div>
@@ -81,6 +82,7 @@ function Form() {
                         id="person_income"
                         name="person_income"
                         value={person_income}
+                        required
                         onChange={handleChange}
                     />
                 </div>
@@ -95,6 +97,7 @@ function Form() {
                         id="person_emp_length"
                         name="person_emp_length"
                         value={person_emp_length}
+                        required
                         onChange={handleChange}
                     />
                 </div>
@@ -108,17 +111,19 @@ function Form() {
                         id="loan_amnt"
                         name="loan_amnt"
                         value={loan_amnt}
+                        required
                         onChange={handleChange}
+                        
                     />
                 </div>
 
-                <button type="submit" className="btn btn-
+                <button type="submit" id="btn" className="btn btn-
 primary">Enviar</button>
 
             </form>
             {result && (
                 <div className="card-body">
-                    <h2>Resultado da Predição:</h2>
+                    <h2>Resultado da Predição</h2>
                     <p className="alert alert-primary">{result}</p>
                 </div>
             )}
